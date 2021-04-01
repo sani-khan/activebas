@@ -58,7 +58,7 @@ function IndexViewModel() {
 var ViewM = new IndexViewModel();
 GetAllRecords();
 ko.applyBindings(ViewM);
-GetAllRecords=()=>{
+function GetAllRecords(){
     
 ViewM.get_record("all");
 }
