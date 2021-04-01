@@ -1,0 +1,19 @@
+
+.form-control.dateInput1,
+.form-control.dateInput2 {
+    padding: .6rem 1rem .6rem 1rem;
+}
+
+.form-control.dateInput1 {
+    border-radius: .3rem 0 0 .3rem;
+    border-right: .5px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-control.dateInput2 {
+    border-radius: 0 .3rem .3rem 0;
+}
+.calender-icon{
+    position: relative;
+    top: -35px;
+    left: 90%;
+}
