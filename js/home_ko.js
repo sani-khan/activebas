@@ -1,11 +1,11 @@
-
+var ip="http://localhost/activebas";
 function IndexViewModel() {
     var self = this; 
     self.get_all_record = ko.observableArray();
     self.Total_fee = ko.observable(0);
     // get record from filter employee name and event name
     self.filter_result=function(type,text){
-        fetch('http://localhost/activebas_task/server.php?type=' + type+'&text='+text).then(x => {
+        fetch(ip+'/server.php?type=' + type+'&text='+text).then(x => {
 
             x.json().then(b => {
                 self.get_all_record.removeAll();
@@ -22,7 +22,7 @@ function IndexViewModel() {
     } 
     // get record from filter dates
     self.filter_result_date=function(type,fromDate,toDate){
-        fetch('http://localhost/activebas_task/server.php?type=' + type+'&fromdate='+fromDate+'&todate='+toDate).then(x => {
+        fetch(ip+'/server.php?type=' + type+'&fromdate='+fromDate+'&todate='+toDate).then(x => {
 
             x.json().then(b => {
                 self.get_all_record.removeAll();
@@ -39,7 +39,7 @@ function IndexViewModel() {
     } 
     //get all the Records
     self.get_record=function(type){
-        fetch('http://localhost/activebas_task/server.php?type=' + type).then(x => {
+        fetch(ip+'/server.php?type=' + type).then(x => {
 
             x.json().then(b => {
                 self.get_all_record.removeAll();
@@ -56,9 +56,12 @@ function IndexViewModel() {
     }
 }
 var ViewM = new IndexViewModel();
-ViewM.get_record("all");
+GetAllRecords();
 ko.applyBindings(ViewM);
-
+GetAllRecords=()=>{
+    
+ViewM.get_record("all");
+}
 // clear filtering 
 clearfilterData =()=>{
     $("#filterbtn").css("display","block");

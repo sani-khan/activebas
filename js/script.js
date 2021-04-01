@@ -24,7 +24,7 @@ $(document).ready(function (e) {
                 $("#err").fadeOut();
             },
             success: function (data) {
-
+                GetAllRecords();
                 $("#success").css("display", "block");
                 $("#success").html("loaded sucessfully").fadeIn();
                 setTimeout(() => {
