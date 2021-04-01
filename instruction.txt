@@ -1,0 +1,5 @@
+For code execution
+following of the services you need before code execution
+1. apache server
+2. MySQL
+3. PHP
