@@ -79,7 +79,7 @@ $db = new dbconfig();
                 </select>
             </div>
             <div class="col-md-2">
-                <button type="button" id="filterbtn" class="btn btn-primary" onclick="filterDate()">
+                <button type="button" id="filterbtn" class="btn btn-primary" onclick="filterData()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-filter" viewBox="0 0 16 16">
                         <path
@@ -89,7 +89,7 @@ $db = new dbconfig();
                     Filter
                 </button>
                 
-                <button type="button" id="clearfilterbtn" class="btn btn-primary" onclick="clearfilterDate()" style="display:none;">
+                <button type="button" id="clearfilterbtn" class="btn btn-primary" onclick="clearfilterData()" style="display:none;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-filter" viewBox="0 0 16 16">
                         <path
